@@ -4,21 +4,21 @@ function Tempo(props) {
     
     return (
         <>
-            {stringData} (dinamico)
-            {props} (dinamico)
+            {stringData} (dinamico)<br/>
+            
+            {props.stringData} (dinamico)
         </>
     )
 }
 
 export function getStaticProps () {
     
-    const dataDinamica = new Date()
-    const stringData = dataDinamica.toGMTString()
+    const novaDinamica = new Date()
+    const stringData = novaDinamica.toGMTString()
 
     return {
         props: {
-            stringData,
-            revalidate: 5
+            stringData
         }
     }
 }
