@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Link from 'next/link'
 function Home() {
     const [cont, setCont] = useState(0)
 
@@ -13,7 +13,9 @@ function Home() {
         <p>Numero: {cont}</p>
         <button onClick={()=> setCont(cont + 1)}>Add</button>
         <br/>
-        <a href="/sobre">Sobre</a>
+        <Link href="/sobre">
+            <a >Sobre</a>
+        </Link>
         </>
     )
 }
