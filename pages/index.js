@@ -12,6 +12,8 @@ function Home() {
 
         <p>Numero: {cont}</p>
         <button onClick={()=> setCont(cont + 1)}>Add</button>
+        <br/>
+        <a href="/sobre">Sobre</a>
         </>
     )
 }
