@@ -6,7 +6,7 @@ function Tempo(props) {
         <>
             {stringData} (dinamico)<br/>
             
-            {props.stringData} (dinamico)
+            {props.stringData} (estatico)
         </>
     )
 }
@@ -18,8 +18,10 @@ export function getStaticProps () {
 
     return {
         props: {
-            stringData
-        }
+            stringData,
+            
+        },
+        revalidate: 5
     }
 }
 
